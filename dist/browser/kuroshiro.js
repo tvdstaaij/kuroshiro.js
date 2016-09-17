@@ -9906,7 +9906,7 @@ var init = function(options, callback){
     }
 
     var dicPath = options.dicPath;
-    if(!dicPath){
+    if(dicPath === undefined){
         if(isNode) dicPath = require.resolve('kuromoji').replace(/src.*/,'dict/');
         else dicPath = 'bower_components/kuroshiro/dist/dict/';
     }
@@ -9937,5 +9937,6 @@ var kuroshiro = {
 };
 
 module.exports = kuroshiro;
+
 },{"kuromoji":15,"wanakana":27}]},{},[29])(29)
 });
